@@ -1,18 +1,259 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MaterNutri</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MaterNutri — Nutrição e bem-estar na gestação</title>
+  <link rel="stylesheet" href="inicial.css">
 </head>
-<body>  
-    <div>
-        <nav>
-            <div class="container-fluid">
-                
-            </div>
-        </nav>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <header class="navbar">
+    <div class="navbar__logo">
+      <img src="img/logo.png" alt="MaterNutri" class="navbar__logo-img">
+      <span class="navbar__brand">Mater<span class="navbar__brand--accent">Nutri</span></span>
     </div>
+
+    <nav class="navbar__links">
+      <a href="#funcionalidades">Funcionalidades</a>
+      <a href="#nutrientes">Nutrientes</a>
+      <a href="#trimestres">Trimestres</a>
+    </nav>
+
+    <div class="navbar__actions">
+      <a href="#entrar" class="navbar__entrar">Entrar</a>
+      <a href="#comecar" class="navbar__cta">
+        Começar agora
+        <span class="navbar__cta-arrow">→</span>
+      </a>
+    </div>
+
+    <button class="navbar__menu-toggle" aria-label="Abrir menu">☰</button>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="hero__content">
+      <span class="badge">🌱 Plataforma de nutrição para gestantes</span>
+
+      <h1 class="hero__title">Nutrição com carinho em<br>cada etapa da sua gestação</h1>
+
+      <p class="hero__subtitle">
+        O MaterNutri reúne diário alimentar, hidratação, suplementos, exames e
+        orientações confiáveis em um só lugar — para você viver a gravidez
+        com mais tranquilidade e saúde.
+      </p>
+
+      <div class="hero__actions">
+        <a href="#comecar" class="btn btn--primary">Começar agora <span>→</span></a>
+        <a href="#funcionalidades" class="btn btn--secondary">Conhecer os recursos</a>
+      </div>
+
+      <ul class="hero__trust">
+        <li>🛡️ Seus dados protegidos</li>
+        <li>💗 Apoio ao seu pré-natal</li>
+        <li>✅ Gratuito</li>
+      </ul>
+    </div>
+
+    <div class="hero__visual">
+      <div class="hero__illustration" aria-hidden="true"></div>
+
+      <div class="floating-card floating-card--week">
+        <span class="floating-card__icon">😊</span>
+        <div>
+          <p class="floating-card__eyebrow">SEMANA 24</p>
+          <p class="floating-card__text">Seu bebê está do tamanho de uma espiga de milho</p>
+        </div>
+      </div>
+
+      <div class="floating-card floating-card--hydration">
+        <p class="floating-card__title">💧 Hidratação de hoje</p>
+        <p class="floating-card__text">6 de 8 copos — quase lá!</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FUNCIONALIDADES ===== -->
+  <section id="funcionalidades" class="section">
+    <div class="section__header">
+      <span class="badge badge--outline">Funcionalidades</span>
+      <h2>Tudo o que você precisa, em um só lugar</h2>
+      <p>Ferramentas pensadas para a rotina da gestante: simples de usar, organizadas por semana e sempre com você.</p>
+    </div>
+
+    <div class="grid grid--2">
+      <article class="card">
+        <span class="card__icon">🍽️</span>
+        <h3>Diário alimentar</h3>
+        <p>Registre suas refeições por dia e acompanhe seus hábitos alimentares ao longo da gestação.</p>
+      </article>
+
+      <article class="card">
+        <span class="card__icon">📅</span>
+        <h3>Acompanhamento semanal</h3>
+        <p>Semana a semana: o tamanho do bebê, os cuidados e as orientações do seu trimestre.</p>
+      </article>
+
+      <article class="card">
+        <span class="card__icon">💧</span>
+        <h3>Hidratação</h3>
+        <p>Controle diário de copos de água com meta e progresso visual para nunca esquecer de se hidratar.</p>
+      </article>
+
+      <article class="card">
+        <span class="card__icon">💊</span>
+        <h3>Suplementos</h3>
+        <p>Gerencie vitaminas e medicamentos em uso, com dose e frequência informadas ou prescritas.</p>
+      </article>
+
+      <article class="card">
+        <span class="card__icon">📄</span>
+        <h3>Exames e documentos</h3>
+        <p>Guarde exames, laudos e prescrições do pré-natal organizados e sempre à mão.</p>
+      </article>
+
+      <article class="card">
+        <span class="card__icon">🔔</span>
+        <h3>Lembretes</h3>
+        <p>Consultas, exames e horários de suplementos: receba tudo organizado em um só lugar.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ===== NUTRIENTES ===== -->
+  <section id="nutrientes" class="section section--muted">
+    <div class="section__header">
+      <span class="badge badge--outline">Nutrientes essenciais</span>
+      <h2>O que não pode faltar no seu prato</h2>
+      <p>Conteúdo educativo sobre os nutrientes mais importantes da gestação, com fontes alimentares acessíveis do dia a dia.</p>
+    </div>
+
+    <div class="nutrient-hero" aria-hidden="true"></div>
+
+    <div class="grid grid--2">
+      <article class="card">
+        <span class="card__icon">🌿</span>
+        <h3>Ácido fólico</h3>
+        <p>Essencial no 1º trimestre para o tubo neural do bebê.</p>
+        <p class="card__source">Folhas verde-escuras, feijões, laranja</p>
+      </article>
+
+      <article class="card">
+        <span class="card__icon">🩸</span>
+        <h3>Ferro</h3>
+        <p>Previne a anemia e sustenta o aumento do volume de sangue.</p>
+        <p class="card__source">Carnes, feijões, lentilha — combine com vitamina C</p>
+      </article>
+
+      <article class="card">
+        <span class="card__icon">🦴</span>
+        <h3>Cálcio</h3>
+        <p>Formação dos ossos e dentes do bebê.</p>
+        <p class="card__source">Leite e derivados, sardinha, gergelim</p>
+      </article>
+
+      <article class="card">
+        <span class="card__icon">🐟</span>
+        <h3>Ômega-3 (DHA)</h3>
+        <p>Desenvolvimento do cérebro e da visão do bebê.</p>
+        <p class="card__source">Peixes de baixo mercúrio, chia, linhaça</p>
+      </article>
+
+      <article class="card">
+        <span class="card__icon">☀️</span>
+        <h3>Vitamina D</h3>
+        <p>Ajuda na absorção do cálcio e na imunidade.</p>
+        <p class="card__source">Sol moderado, ovos, peixes</p>
+      </article>
+
+      <article class="card">
+        <span class="card__icon">🥚</span>
+        <h3>Proteínas</h3>
+        <p>Crescimento dos tecidos da mãe e do bebê.</p>
+        <p class="card__source">Ovos, carnes magras, leguminosas, lácteos</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ===== TRIMESTRES ===== -->
+  <section id="trimestres" class="section">
+    <div class="section__header">
+      <span class="badge badge--outline">Sua jornada</span>
+      <h2>Orientações para cada fase da gestação</h2>
+      <p>O MaterNutri adapta os conteúdos e cuidados conforme a sua semana de gestação.</p>
+    </div>
+
+    <div class="trimesters">
+      <article class="trimester-card">
+        <p class="trimester-card__weeks">SEMANAS 1 A 13</p>
+        <h3>1º trimestre</h3>
+        <p>Fase da fundação: ácido fólico em destaque, manejo dos enjoos e os primeiros exames do pré-natal.</p>
+        <div class="tags">
+          <span class="tag">Ácido fólico</span>
+          <span class="tag">Refeições pequenas</span>
+          <span class="tag">Hidratação</span>
+        </div>
+      </article>
+
+      <article class="trimester-card">
+        <p class="trimester-card__weeks">SEMANAS 14 A 27</p>
+        <h3>2º trimestre</h3>
+        <p>Energia em alta: ferro, cálcio e proteínas acompanham o crescimento acelerado do bebê.</p>
+        <div class="tags">
+          <span class="tag">Ferro + vitamina C</span>
+          <span class="tag">Cálcio</span>
+          <span class="tag">Proteínas</span>
+        </div>
+      </article>
+
+      <article class="trimester-card">
+        <p class="trimester-card__weeks">SEMANAS 28 A 40</p>
+        <h3>3º trimestre</h3>
+        <p>Reta final: ômega-3 para o cérebro do bebê, fibras para o conforto e preparação para o parto.</p>
+        <div class="tags">
+          <span class="tag">Ômega-3</span>
+          <span class="tag">Fibras</span>
+          <span class="tag">Conforto digestivo</span>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ===== CTA ===== -->
+  <section class="section">
+    <div class="cta-box">
+      <span class="cta-box__icon">💞</span>
+      <h2>Comece hoje a cuidar da sua alimentação</h2>
+      <p>Cadastre-se gratuitamente e receba orientações pensadas para a sua semana de gestação.</p>
+      <a href="#comecar" class="btn btn--primary">Criar minha conta <span>→</span></a>
+    </div>
+  </section>
+
+  <!-- ===== AVISO ===== -->
+  <section class="section section--tight">
+    <div class="disclaimer">
+      <span class="disclaimer__icon">🛡️</span>
+      <p>
+        <strong>Importante:</strong> o MaterNutri é uma ferramenta de apoio e orientação. Ele não substitui
+        consultas, diagnósticos ou prescrições de médicos, nutricionistas e outros profissionais de saúde.
+        Em caso de dúvida, siga sempre a orientação do profissional que acompanha a sua gestação.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="navbar__logo">
+      <img src="img/logo.png" alt="MaterNutri" class="navbar__logo-img navbar__logo-img--small">
+      <span class="navbar__brand">Mater<span class="navbar__brand--accent">Nutri</span></span>
+    </div>
+    <p class="footer__meta">
+      Projeto Integrador III — Sistemas de Informação · UNIPAM<br>
+      Eliane da Nutry · 2026
+    </p>
+  </footer>
 
 </body>
 </html>
