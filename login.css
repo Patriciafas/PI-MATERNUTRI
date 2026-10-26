@@ -1,0 +1,495 @@
+
+/* ===== CONFIGURAÇÕES GERAIS ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --rosa-principal: #d44959;
+    --rosa-escuro: #cc4051;
+    --rosa-claro: #f5e7e4;
+    --fundo: #f8f7f0;
+    --texto: #402d33;
+    --texto-secundario: #89757c;
+    --borda: #ead8d4;
+    --branco: #fffdfc;
+}
+
+body {
+    font-family: "Nunito Sans", sans-serif;
+    color: var(--texto);
+    background: var(--fundo);
+    min-height: 100vh;
+}
+
+/* ===== ESTRUTURA PRINCIPAL ===== */
+.pagina-login {
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+}
+
+/* ===== PAINEL ESQUERDO ===== */
+.painel-esquerdo {
+    width: 49%;
+    min-height: 100vh;
+    padding: 45px 5.5% 30px 2.7%;
+    background: linear-gradient(
+        145deg,
+        #d76771 0%,
+        #d34e5e 60%,
+        #ce4052 100%
+    );
+
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Elementos decorativos */
+.painel-esquerdo::before,
+.painel-esquerdo::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.painel-esquerdo::before {
+    width: 390px;
+    height: 390px;
+    top: 25%;
+    left: 15%;
+    background: rgba(157, 34, 53, 0.09);
+    border: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.painel-esquerdo::after {
+    width: 220px;
+    height: 220px;
+    top: 4%;
+    left: -45px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 2px solid rgba(255, 255, 255, 0.05);
+}
+
+/* ===== LOGO ===== */
+.logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    width: fit-content;
+    text-decoration: none;
+    color: white;
+    font-size: 23px;
+    font-weight: 900;
+    position: relative;
+    z-index: 1;
+}
+
+.logo-icone {
+    width: 43px;
+    height: 43px;
+    background: #fffdfc;
+    color: var(--rosa-principal);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+
+/* ===== TEXTO ESQUERDO ===== */
+.conteudo-esquerdo {
+    position: relative;
+    z-index: 1;
+    max-width: 540px;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding: 45px 0;
+}
+
+.conteudo-esquerdo h1 {
+    font-size: clamp(30px, 2.5vw, 42px);
+    line-height: 1.32;
+    font-weight: 900;
+    letter-spacing: -1px;
+    margin-bottom: 20px;
+    max-width: 520px;
+}
+
+.conteudo-esquerdo p {
+    font-size: 18px;
+    line-height: 1.75;
+    font-weight: 500;
+    max-width: 560px;
+}
+
+/* ===== RODAPÉ ESQUERDO ===== */
+.rodape-esquerdo {
+    position: relative;
+    z-index: 1;
+    font-size: 14px;
+    line-height: 1.7;
+    opacity: 0.95;
+}
+
+/* ===== PAINEL DIREITO ===== */
+.painel-direito {
+    width: 51%;
+    min-height: 100vh;
+    padding: 45px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background:
+        radial-gradient(
+            ellipse at 90% 10%,
+            rgba(255, 220, 211, 0.65),
+            transparent 45%
+        ),
+        radial-gradient(
+            ellipse at 20% 100%,
+            rgba(233, 220, 216, 0.55),
+            transparent 40%
+        ),
+        var(--fundo);
+}
+
+/* ===== ÁREA DO FORMULÁRIO ===== */
+.area-formulario {
+    width: 100%;
+    max-width: 525px;
+}
+
+/* ===== CARTÃO DE LOGIN ===== */
+.cartao-login {
+    width: 100%;
+    padding: 28px;
+    background: var(--branco);
+    border: 1px solid rgba(234, 216, 212, 0.75);
+    border-radius: 25px;
+    box-shadow: 0 18px 55px rgba(85, 47, 52, 0.09);
+}
+
+/* ===== CABEÇALHO ===== */
+.cabecalho-login {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.cabecalho-login h2 {
+    font-size: 27px;
+    line-height: 1.4;
+    font-weight: 900;
+    letter-spacing: -0.8px;
+    margin-bottom: 7px;
+}
+
+.cabecalho-login p {
+    color: var(--texto-secundario);
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* ===== CAMPOS ===== */
+.campo {
+    margin-bottom: 22px;
+}
+
+.campo label {
+    display: block;
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 7px;
+}
+
+.campo-input {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    height: 43px;
+    padding: 0 14px;
+    background: #fffdfc;
+    border: 1px solid var(--borda);
+    border-radius: 14px;
+    box-shadow: 0 2px 4px rgba(64, 45, 51, 0.08);
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.campo-input:focus-within {
+    border-color: var(--rosa-principal);
+    box-shadow: 0 0 0 3px rgba(212, 73, 89, 0.1);
+}
+
+.campo-input > i {
+    color: var(--texto-secundario);
+    font-size: 18px;
+    flex-shrink: 0;
+}
+
+.campo-input input {
+    width: 100%;
+    min-width: 0;
+    height: 100%;
+    outline: none;
+    border: none;
+    background: transparent;
+    color: var(--texto);
+    font-family: inherit;
+    font-size: 15px;
+}
+
+.campo-input input::placeholder {
+    color: var(--texto-secundario);
+    opacity: 1;
+}
+
+/* ===== MOSTRAR SENHA ===== */
+.mostrar-senha {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background: transparent;
+    color: var(--texto-secundario);
+    cursor: pointer;
+    font-size: 18px;
+    padding: 3px;
+    transition: color 0.2s;
+}
+
+.mostrar-senha:hover {
+    color: var(--rosa-principal);
+}
+
+/* ===== ESQUECI MINHA SENHA ===== */
+.opcoes-login {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: -10px;
+    margin-bottom: 20px;
+}
+
+.opcoes-login a {
+    color: var(--rosa-escuro);
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.opcoes-login a:hover {
+    text-decoration: underline;
+}
+
+/* ===== BOTÃO ENTRAR ===== */
+.botao-entrar {
+    width: 100%;
+    min-height: 43px;
+    border: none;
+    border-radius: 13px;
+    background: var(--rosa-principal);
+    color: white;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 800;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(64, 45, 51, 0.12);
+    transition: background 0.2s, transform 0.2s;
+}
+
+.botao-entrar:hover {
+    background: var(--rosa-escuro);
+    transform: translateY(-1px);
+}
+
+.botao-entrar:active {
+    transform: translateY(0);
+}
+
+/* ===== SEPARADOR ===== */
+.separador {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 26px 0;
+}
+
+.separador span {
+    flex: 1;
+    height: 1px;
+    background: var(--borda);
+}
+
+.separador p {
+    color: var(--texto-secundario);
+    font-size: 13px;
+}
+
+/* ===== BOTÃO GOOGLE ===== */
+.botao-google {
+    width: 100%;
+    min-height: 43px;
+    padding: 8px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border: 1px solid var(--borda);
+    border-radius: 13px;
+    background: var(--fundo);
+    color: var(--texto);
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(64, 45, 51, 0.08);
+    transition: background 0.2s, transform 0.2s;
+}
+
+.botao-google:hover {
+    background: #f0eee7;
+    transform: translateY(-1px);
+}
+
+.google-icone {
+    font-family: Arial, sans-serif;
+    font-size: 21px;
+    font-weight: 900;
+    background: conic-gradient(
+        from -45deg,
+        #4285f4 0deg 90deg,
+        #34a853 90deg 180deg,
+        #fbbc05 180deg 250deg,
+        #ea4335 250deg 310deg,
+        #4285f4 310deg 360deg
+    );
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+/* ===== AVISO DE SAÚDE ===== */
+.aviso-saude {
+    margin-top: 27px;
+    padding: 0 8px;
+    text-align: center;
+    color: var(--texto-secundario);
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+/* ===== TABLETS ===== */
+@media (max-width: 1000px) {
+    .painel-esquerdo {
+        width: 43%;
+        padding: 35px 4%;
+    }
+
+    .painel-direito {
+        width: 57%;
+        padding: 30px 22px;
+    }
+
+    .conteudo-esquerdo h1 {
+        font-size: 32px;
+    }
+
+    .conteudo-esquerdo p {
+        font-size: 16px;
+    }
+
+    .cartao-login {
+        padding: 25px 22px;
+    }
+}
+
+/* ===== CELULARES ===== */
+@media (max-width: 700px) {
+    .pagina-login {
+        flex-direction: column;
+    }
+
+    .painel-esquerdo {
+        width: 100%;
+        min-height: auto;
+        padding: 25px 22px;
+    }
+
+    .logo {
+        font-size: 21px;
+    }
+
+    .logo-icone {
+        width: 39px;
+        height: 39px;
+    }
+
+    .conteudo-esquerdo {
+        padding: 40px 0 25px;
+    }
+
+    .conteudo-esquerdo h1 {
+        font-size: 29px;
+        line-height: 1.3;
+    }
+
+    .conteudo-esquerdo p {
+        font-size: 15px;
+        line-height: 1.65;
+    }
+
+    .rodape-esquerdo {
+        font-size: 12px;
+        margin-top: 10px;
+    }
+
+    .painel-direito {
+        width: 100%;
+        min-height: auto;
+        padding: 35px 18px;
+    }
+
+    .cartao-login {
+        padding: 25px 20px;
+        border-radius: 21px;
+    }
+
+    .cabecalho-login h2 {
+        font-size: 24px;
+    }
+
+    .cabecalho-login p {
+        font-size: 14px;
+    }
+
+    .aviso-saude {
+        font-size: 12px;
+        margin-top: 20px;
+    }
+}
+
+/* ===== CELULARES PEQUENOS ===== */
+@media (max-width: 380px) {
+    .painel-esquerdo {
+        padding: 22px 18px;
+    }
+
+    .conteudo-esquerdo h1 {
+        font-size: 26px;
+    }
+
+    .painel-direito {
+        padding: 25px 12px;
+    }
+
+    .cartao-login {
+        padding: 22px 16px;
+    }
+}

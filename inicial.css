@@ -128,7 +128,7 @@ a {
 }
 
 .navbar__cta:hover {
-  background-color: var(--coral-dark);
+  background-color: var(--coral);
   transform: translateX(2px);
 }
 
@@ -355,6 +355,12 @@ a {
   color: var(--coral-dark);
   font-size: 0.9rem;
   font-weight: 500;
+}
+
+.card:hover{
+  border-color: var(--coral);
+  color: var(--coral-dark);
+  transform: translateY(2px);
 }
 
 /* ===== Nutrient hero image ===== */
