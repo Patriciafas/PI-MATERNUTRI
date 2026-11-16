@@ -6,6 +6,7 @@
   <title>MaterNutri — Nutrição e bem-estar na gestação</title>
   <link rel="stylesheet" href="inicial.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="chatbot.css">
 </head>
 <body>
 
@@ -263,6 +264,49 @@
       Direito reservados aos Estudantes: Mayke Aguiar, Giovani Rafael, Patricia Francis, Lucas Tolentino e Arthur Marra! · 2026
     </p>
   </footer>
+  
+<button id="mater-chat-button" aria-label="Abrir assistente">
+    ✦
+</button>
+
+<div id="mater-chat">
+    <div class="chat-header">
+        <div>
+            <strong>MaterNutri IA</strong>
+            <div style="font-size:12px">
+                Seu assistente inteligente
+            </div>
+        </div>
+
+        <button id="chat-close" aria-label="Fechar">×</button>
+    </div>
+
+    <div class="chat-controls">
+        <select id="chat-mode">
+            <option value="nutricao">Assistente de Nutrição</option>
+            <option value="geral">Inteligência Artificial Geral</option>
+        </select>
+    </div>
+
+    <div id="chat-messages">
+        <div class="chat-message bot-message">
+            Olá! Sou o MaterNutri IA. Como posso ajudar?
+        </div>
+    </div>
+
+    <div class="chat-input">
+        <input
+            id="chat-text"
+            type="text"
+            placeholder="Digite sua pergunta..."
+            maxlength="4000"
+        >
+
+        <button id="chat-send">Enviar</button>
+    </div>
+</div>
+
+<script src="chatbot.js"></script>
 
 </body>
 </html>
