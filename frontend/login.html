@@ -173,14 +173,22 @@
         });
 
         // Envio do formulário
-        formulario.addEventListener("submit", (evento) => {
-            evento.preventDefault();
+       // Envio do formulário
+formulario.addEventListener("submit", (evento) => {
+    evento.preventDefault();
 
-            alert(
-                "A interface está pronta. Para entrar na conta, " +
-                "é necessário conectar o formulário ao sistema de autenticação."
-            );
-        });
+    const email = document.getElementById("email").value.trim();
+    const senha = document.getElementById("senha").value;
+
+    if (email === "" || senha === "") {
+        alert("Preencha seu e-mail e sua senha.");
+        return;
+    }
+
+    // Direciona para a tela de cadastro
+    window.location.href = "cadastro.html";
+});
+        
 
         // Recuperação de senha
         esqueciSenha.addEventListener("click", (evento) => {
