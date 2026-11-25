@@ -1,0 +1,120 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Suplementos | MaterNutri</title>
+  <link rel="stylesheet" href="suplementos.css">
+</head>
+<body>
+
+  <aside class="sidebar">
+    <div class="logo">
+      <span class="logo-heart">♥</span>
+      <span>Mater<span class="logo-red">Nutri</span></span>
+    </div>
+
+    <nav>
+      <a href="painel.html">▦ <span>Início</span></a>
+      <a href="alimentacao.html">⚒ <span>Alimentação</span></a>
+      <a href="suplementos.html" class="active">♢ <span>Suplementos</span></a>
+      <a href="exames.html">♧ <span>Exames</span></a>
+      <a href="lembretes.html">♧ <span>Lembretes</span></a>
+      <a href="perfil.html">♙ <span>Perfil</span></a>
+    </nav>
+
+    <div class="sidebar-bottom">
+      <div class="notice">
+        O MaterNutri é uma ferramenta de apoio e não substitui o acompanhamento de profissionais de saúde.
+      </div>
+      <a href="login.html" class="logout">⇥ <span>Sair</span></a>
+    </div>
+  </aside>
+
+  <main class="main-content">
+    <header class="page-header">
+      <div>
+        <span class="eyebrow">Sua rotina de cuidados</span>
+        <h1>Suplementos</h1>
+        <p>Acompanhe doses e frequências dos suplementos em uso.</p>
+      </div>
+      <button class="primary-button" id="new-supplement">＋ Novo suplemento</button>
+    </header>
+
+    <div class="tabs">
+      <button class="tab active" data-status="ativo" id="tab-active">
+        Em uso (<span id="active-count">0</span>)
+      </button>
+      <button class="tab" data-status="pausado" id="tab-paused">
+        Pausados (<span id="paused-count">0</span>)
+      </button>
+    </div>
+
+    <section class="supplement-list" id="supplement-list">
+      <div class="empty-state">
+        <div class="empty-icon">♢</div>
+        <h3>Nenhum suplemento aqui</h3>
+        <p>Cadastre vitaminas e suplementos orientados pelo profissional de saúde.</p>
+      </div>
+    </section>
+  </main>
+
+  <div class="modal-overlay" id="supplement-modal">
+    <div class="modal">
+      <button class="close-modal" id="close-modal" aria-label="Fechar">×</button>
+
+      <h2>Novo suplemento</h2>
+      <p class="modal-description">Registre as orientações recebidas do seu profissional de saúde.</p>
+
+      <form id="supplement-form">
+        <label for="supplement-name">Nome do suplemento</label>
+        <input
+          type="text"
+          id="supplement-name"
+          placeholder="Ex.: Vitamina D"
+          required
+        >
+
+        <label for="supplement-dose">Dose orientada</label>
+        <input
+          type="text"
+          id="supplement-dose"
+          placeholder="Ex.: 1 cápsula de 1000 UI"
+          required
+        >
+
+        <label for="supplement-frequency">Frequência de uso</label>
+        <select id="supplement-frequency" required>
+          <option value="">Selecione</option>
+          <option value="Uma vez ao dia">Uma vez ao dia</option>
+          <option value="Duas vezes ao dia">Duas vezes ao dia</option>
+          <option value="Três vezes ao dia">Três vezes ao dia</option>
+          <option value="Em dias alternados">Em dias alternados</option>
+          <option value="Uma vez por semana">Uma vez por semana</option>
+          <option value="Conforme orientação profissional">Conforme orientação profissional</option>
+          <option value="Outra frequência">Outra frequência</option>
+        </select>
+
+        <label for="supplement-time">Horário (opcional)</label>
+        <input type="time" id="supplement-time">
+
+        <label for="supplement-start">Data de início</label>
+        <input type="date" id="supplement-start" required>
+
+        <label for="supplement-notes">Observações (opcional)</label>
+        <textarea
+          id="supplement-notes"
+          placeholder="Ex.: orientação recebida na consulta..."
+        ></textarea>
+
+        <button type="submit" class="primary-button save-button">
+          Salvar suplemento
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <script src="suplementos.js"></script>
+</body>
+</html>

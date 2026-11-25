@@ -1,0 +1,108 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alimentação | MaterNutri</title>
+  <link rel="stylesheet" href="alimentacao.css">
+</head>
+<body>
+
+  <aside class="sidebar">
+    <div class="logo">
+      <span class="logo-heart">♥</span>
+      <span>Mater<span>Nutri</span></span>
+    </div>
+
+    <nav>
+      <a href="painel.html">▦ <span>Início</span></a>
+      <a href="alimentacao.html" class="active">⚒ <span>Alimentação</span></a>
+      <a href="suplementos.html">♢ <span>Suplementos</span></a>
+      <a href="exames.html">♧ <span>Exames</span></a>
+      <a href="lembretes.html">♧ <span>Lembretes</span></a>
+      <a href="perfil.html">♙ <span>Perfil</span></a>
+    </nav>
+
+    <div class="sidebar-bottom">
+      <div class="notice">
+        O MaterNutri é uma ferramenta de apoio e não substitui o acompanhamento de profissionais de saúde.
+      </div>
+      <a href="login.html" class="logout">⇥ <span>Sair</span></a>
+    </div>
+  </aside>
+
+  <main class="main-content">
+    <header class="page-header">
+      <div>
+        <span class="eyebrow">Diário alimentar</span>
+        <h1>Alimentação</h1>
+        <p>Registre o que comeu e acompanhe sua rotina diária.</p>
+      </div>
+      <button class="primary-button" id="new-meal">＋ Nova refeição</button>
+    </header>
+
+    <section class="filters">
+      <div class="search-box">
+        <span>⌕</span>
+        <input type="search" id="search-meal" placeholder="Pesquisar alimento ou refeição">
+      </div>
+
+      <input type="date" id="filter-date" class="date-filter">
+      <button class="secondary-button" id="show-all">Ver todas</button>
+    </section>
+
+    <section class="meal-list" id="meal-list">
+      <div class="empty-state">
+        <div class="empty-icon">⚒</div>
+        <h3>Nenhuma refeição encontrada</h3>
+        <p>Registre uma refeição ou altere os filtros para consultar seu diário.</p>
+        <button class="primary-button" id="empty-new-meal">＋ Nova refeição</button>
+      </div>
+    </section>
+  </main>
+
+  <div class="modal-overlay" id="meal-modal">
+    <div class="modal">
+      <button class="close-modal" id="close-modal" aria-label="Fechar">×</button>
+      <h2>Nova refeição</h2>
+      <p class="modal-description">Registre o que você comeu.</p>
+
+      <form id="meal-form">
+        <label for="meal-name">Nome da refeição</label>
+        <select id="meal-name" required>
+          <option value="">Selecione</option>
+          <option value="Café da manhã">Café da manhã</option>
+          <option value="Lanche da manhã">Lanche da manhã</option>
+          <option value="Almoço">Almoço</option>
+          <option value="Lanche da tarde">Lanche da tarde</option>
+          <option value="Jantar">Jantar</option>
+          <option value="Ceia">Ceia</option>
+          <option value="Outro">Outro</option>
+        </select>
+
+        <label for="food-name">Alimentos consumidos</label>
+        <textarea id="food-name" placeholder="Ex.: arroz, feijão, frango e salada..." required></textarea>
+
+        <div class="form-row">
+          <div>
+            <label for="meal-date">Data</label>
+            <input type="date" id="meal-date" required>
+          </div>
+          <div>
+            <label for="meal-time">Horário</label>
+            <input type="time" id="meal-time" required>
+          </div>
+        </div>
+
+        <label for="meal-notes">Observações (opcional)</label>
+        <textarea id="meal-notes" placeholder="Como foi sua refeição?"></textarea>
+
+        <button type="submit" class="primary-button save-button">Salvar refeição</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="alimentacao.js"></script>
+</body>
+</html>

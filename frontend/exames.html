@@ -1,0 +1,127 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exames | MaterNutri</title>
+  <link rel="stylesheet" href="exames.css">
+</head>
+<body>
+
+  <aside class="sidebar">
+    <div class="logo">
+      <span class="logo-heart">♥</span>
+      <span>Mater<span class="logo-red">Nutri</span></span>
+    </div>
+
+    <nav>
+      <a href="painel.html">▦ <span>Início</span></a>
+      <a href="alimentacao.html">⚒ <span>Alimentação</span></a>
+      <a href="suplementos.html">♢ <span>Suplementos</span></a>
+      <a href="exames.html" class="active">♧ <span>Exames</span></a>
+      <a href="lembretes.html">♧ <span>Lembretes</span></a>
+      <a href="perfil.html">♙ <span>Perfil</span></a>
+    </nav>
+
+    <div class="sidebar-bottom">
+      <div class="notice">
+        O MaterNutri é uma ferramenta de apoio e não substitui o acompanhamento de profissionais de saúde.
+      </div>
+      <a href="login.html" class="logout">⇥ <span>Sair</span></a>
+    </div>
+  </aside>
+
+  <main class="main-content">
+    <header class="page-header">
+      <div>
+        <span class="eyebrow">Seu histórico de saúde</span>
+        <h1>Exames</h1>
+        <p>Guarde laudos, imagens e resultados em um só lugar.</p>
+      </div>
+
+      <button class="primary-button" id="new-exam">
+        ＋ Adicionar exame
+      </button>
+    </header>
+
+    <section class="search-section">
+      <div class="search-box">
+        <span>⌕</span>
+        <input
+          type="search"
+          id="search-exam"
+          placeholder="Pesquisar por título, descrição ou arquivo"
+        >
+      </div>
+    </section>
+
+    <section class="exam-list" id="exam-list">
+      <div class="empty-state">
+        <div class="empty-icon">♧</div>
+        <h3>Seu primeiro exame começa aqui</h3>
+        <p>Adicione exames de sangue, ultrassons, laudos e outros documentos do pré-natal.</p>
+        <button class="primary-button" id="empty-new-exam">
+          ＋ Adicionar exame
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <div class="modal-overlay" id="exam-modal">
+    <div class="modal">
+      <button class="close-modal" id="close-modal" aria-label="Fechar">×</button>
+
+      <h2>Adicionar exame</h2>
+      <p class="modal-description">
+        Guarde as informações do seu exame e, se desejar, anexe o documento.
+      </p>
+
+      <form id="exam-form">
+        <label for="exam-title">Título do exame</label>
+        <input
+          type="text"
+          id="exam-title"
+          placeholder="Ex.: Hemograma completo"
+          required
+        >
+
+        <label for="exam-type">Tipo de exame</label>
+        <select id="exam-type" required>
+          <option value="">Selecione</option>
+          <option value="Exame de sangue">Exame de sangue</option>
+          <option value="Ultrassom">Ultrassom</option>
+          <option value="Exame de urina">Exame de urina</option>
+          <option value="Exame de imagem">Exame de imagem</option>
+          <option value="Outro">Outro</option>
+        </select>
+
+        <label for="exam-date">Data de realização</label>
+        <input type="date" id="exam-date" required>
+
+        <label for="exam-description">Descrição (opcional)</label>
+        <textarea
+          id="exam-description"
+          placeholder="Adicione informações sobre o exame..."
+        ></textarea>
+
+        <label for="exam-file">Anexar laudo ou imagem (opcional)</label>
+        <input
+          type="file"
+          id="exam-file"
+          accept=".pdf,.jpg,.jpeg,.png,.webp"
+        >
+        <small class="file-help">
+          Formatos aceitos: PDF, JPG, PNG e WEBP. Tamanho máximo: 2 MB.
+        </small>
+
+        <button type="submit" class="primary-button save-button">
+          Salvar exame
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <script src="exames.js"></script>
+</body>
+</html>
